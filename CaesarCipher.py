@@ -55,7 +55,7 @@ def encrypt_from_file(input_filename, output_filename, shifts):
         except FileExistsError:
             # Output file already exists, append to it
             with open(output_filename, 'a') as output_file:
-                output_file.write("\n" + encrypted_text)
+                output_file.write(f"\n {encrypted_text}")
 
         print(f"Encryption successful. Result written to {output_filename}")
     except FileNotFoundError:
@@ -73,7 +73,7 @@ def encrypt_from_file(input_filename, output_filename, shifts):
         except FileExistsError:
             # Output file already exists, append to it
             with open(output_filename, 'a') as output_file:
-                output_file.write("\n" + encrypted_text)
+                output_file.write(f"\n {encrypted_text}")
 
         print(f"Input file '{input_filename}' not found. Created with default text. "
               f"Encryption result written to {output_filename}")
@@ -96,7 +96,7 @@ def decrypt_from_file(input_filename, output_filename, shifts):
         except FileExistsError:
             # Output file already exists, append to it
             with open(output_filename, 'a') as output_file:
-                output_file.write(decrypted_text)
+                output_file.write(f"\n {decrypted_text}")
 
         print(f"Decryption successful. Result written to {output_filename}")
     except FileNotFoundError:
@@ -114,7 +114,7 @@ def decrypt_from_file(input_filename, output_filename, shifts):
         except FileExistsError:
             # Output file already exists, append to it
             with open(output_filename, 'a') as output_file:
-                output_file.write(decrypted_text)
+                output_file.write(f"\n {decrypted_text}")
 
         print(f"Input file '{input_filename}' not found. Created with default text. "
               f"Decryption result written to {output_filename}")
